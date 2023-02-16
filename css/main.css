@@ -100,7 +100,7 @@ input, textarea {
   justify-content: center;
 }
 
-.flex-dtart {
+.flex-start {
   display: flex;
   align-items: flex-start;
 }
