@@ -1,0 +1,118 @@
+/* global rules*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: $white;
+    font-family: $text-f;
+}
+section {
+    padding: 60px 0;
+    margin-top: 65px;
+}
+.container {
+    @media (min-width: 1200px) {
+        margin: 0 80px !important;
+    }
+    @media (min-width: 922px) and (max-width: 1199px) {
+        margin: 0 60px !important;
+    }
+    @media (min-width: 768px) and (max-width: 921px) {
+        margin: 0 40px !important;
+    }
+    margin: 0 20px;
+}
+.pattern {
+    margin-bottom: 30px;
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        color: $title-c;
+        font-size: 35px;
+        font-weight: 700;
+    }
+    .line {
+        width: 60px;
+        height: 3px;
+        background-color: $btn-bg;
+        margin: 15px auto;
+    }
+    p {
+        text-align: center;
+    }
+}
+h1, h2, h3, h4, h5, h6, a {
+    font-family: $title-f;
+}
+p {
+    font-size: 16px;
+    font-weight: 400;
+    color: $text-c;
+    line-height: 1.6;
+}
+a {
+    text-decoration: none;
+    transition: .3s;
+}
+ul{
+    list-style: none;
+}
+input, textarea {
+    outline: none;
+    transition: .3s;
+}
+.italic {
+    font-style: italic;
+}
+.align-c {
+    display: flex;
+    align-items: center;
+}
+.c-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-dtart {
+    display: flex;
+    align-items: flex-start;
+}
+.grid-250 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.grid-300 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.button {
+    display: block;
+    width: fit-content;
+    padding: 15px 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid $btn-bg;
+    border-radius: 30px;
+    &.bg-blue {
+        background-color: $btn-bg;
+        color: $white;
+        &:hover {
+            opacity: .8;
+        }
+    }
+    &.bg-white {
+        background-color: $white;
+        color: $btn-bg;
+        &:hover {
+            color: $white;
+            background-color: $btn-bg;
+        }
+    }
+}
+/* global rules*/

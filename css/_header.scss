@@ -1,0 +1,122 @@
+header {
+    padding: 15px 12px;
+    background-color: $bg-header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 111;
+    height: 65px;
+    .logo {
+        a {
+            font-size: 30px;
+            font-weight: 600;
+            color: $title-c;
+            text-transform: uppercase;
+        }
+    }
+    nav {
+        @media (min-width: 922px) {
+            display: block !important;
+        }
+        @media (max-width: 921px) {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, .6);
+            padding: 60px 20px 20px 20px;
+            ul{
+                width: 100%;
+                height: 100%;
+                background-color: $white;
+                border-radius: 10px;
+                padding: 30px;
+                flex-direction: column;
+                li {
+                    a {
+                        color: #222 !important;
+                    }
+                }
+            }
+            .close-nav {
+                display: block !important;
+            }
+        }
+        ul {
+            display: flex;
+            gap: 20px;
+            li {
+                a {
+                    display: block;
+                    width: fit-content;
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    color: $link-c;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        width: 0;
+                        height: 2px;
+                        background-color: $btn-bg;
+                        position: absolute;
+                        left: 0;
+                        top: calc(100% + 5px);
+                        transition: .3s;
+                    }
+                    &.active, &:hover {
+                        color: $btn-bg !important;
+                        &::before {
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        .close-nav {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            i {
+                color: $white;
+                font-size: 18px;
+            }
+        }
+    }
+    .media {
+        @media (max-width:921px){
+            .open-nav {
+                display: block !important;
+            }
+        }
+        gap: 15px;
+        a {
+            i {
+                font-size: 20px;
+                color: $social-c;
+                transition: .3s;
+            }
+            &:hover {
+                i {
+                    color: $btn-bg;
+                }
+            }
+        }
+        .open-nav {
+            display: none;
+            cursor: pointer;
+            i {
+                font-size: 18px;
+                color: $social-c;
+            }
+        }
+    }
+}
